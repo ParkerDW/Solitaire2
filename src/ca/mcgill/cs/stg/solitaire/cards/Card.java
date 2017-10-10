@@ -63,7 +63,24 @@ public final class Card
 	 * Represents the suit of the card.
 	 */
 	public enum Suit 
-	{ CLUBS, DIAMONDS, HEARTS, SPADES }
+	{ CLUBS, DIAMONDS, HEARTS, SPADES;
+		
+		public enum Color 
+		{ BLACK, RED }
+		
+		public Color getColor()
+		{
+			if (this == CLUBS || this == SPADES )
+			{
+				return Color.BLACK; 
+			}
+			else 
+			{
+				return Color.RED;
+			}
+		}
+	
+	}
 	
 	private final Rank aRank;
 	private final Suit aSuit;
@@ -153,4 +170,6 @@ public final class Card
 	{
 		return aRank + " of " + aSuit;
 	}
+	
+	
 }

@@ -20,8 +20,7 @@
  *******************************************************************************/
 package ca.mcgill.cs.stg.solitaire.cards;
 
-import java.util.Collections;
-import java.util.Stack;
+import java.util.*;
 
 import ca.mcgill.cs.stg.solitaire.cards.Card.Rank;
 import ca.mcgill.cs.stg.solitaire.cards.Card.Suit;
@@ -95,4 +94,25 @@ public class Deck
 	{
 		return aCards.size();
 	}
+	
+	public List<Card> getCards()
+	{
+		return new ArrayList<Card>(aCards);		
+	}
+	
+	/**
+	 * 
+	 * @param args
+	 */
+	/*
+	public static void main (String[] args)
+	{
+		Deck nDeck = new Deck();
+		List<Card> nList = nDeck.getCards();
+		for (Card c : nList)
+		{
+			System.out.println(c.toString());	
+		}
+	}
+	*/
 }
